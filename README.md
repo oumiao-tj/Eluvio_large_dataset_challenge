@@ -10,7 +10,7 @@ One difficulty was, &#39;up\_votes&#39; ranges from 0 to 21253 and the distribut
 
 a) The binary classification problem
 
-Define a binary class &#39;category&#39; based on: &#39;category&#39; 0 if &#39;up\_votes&#39; \&lt;= 5 else &#39;category&#39; 1. There is no specific reason of choosing threshold &#39;up\_votes&#39; = 5, but naively because in this way &#39;category&#39; = 0  and &#39;category&#39; = 1 have about equal data amounts. This makes it a balanced binary classification problem.
+Define a binary class &#39;category&#39; based on: &#39;category&#39; 0 if &#39;up\_votes&#39; $\geq$ 5 else &#39;category&#39; 1. There is no specific reason of choosing threshold &#39;up\_votes&#39; = 5, but naively because in this way &#39;category&#39; 0  and &#39;category&#39; 1 have about equal data amounts. This makes it a balanced binary classification problem.
 
 b) The regression problem
 
@@ -50,7 +50,7 @@ It does EDA and saves the following files to &quot;D:\eluvio\data\_\&quot; for t
 
 _&quot;modified\_embedding\_matrix.npy&quot;_ : word embedding matrix mapping word token to word embedding vector. I loaded pretrained &#39;glove.6B.50d&#39; for word embedding. There are 13741 missing words in &#39;title&#39; text. I tried SpellChecker but it works awful. Then I manually corrected the 40 most frequent words and set word embedding of the rest missing words be zero vectors.
 
-_&quot;\_pad\_seq{i}.npy&quot; for i in range(_509236_)_ : size 50 np.array, padded word token for each title text.
+_&quot;\_pad\_seq{i}.npy&quot; for i in range(_509236_)_ : size 50 np.array, padded word token list for each title text.
 
 _&quot;\_feature{i}.npy&quot; for i in range(_509236_)_ : size 8 np.array, features from &#39;date\_created&#39; and &#39;author&#39;: [&#39;author\_norm\_ave\_logvotes&#39;, &#39;author\_norm\_pub\_count&#39;, &#39;norm\_year&#39;, &#39;month\_cosine&#39;, &#39;month\_sine&#39;, &#39;weekday\_cosine&#39;, &#39;weekday\_sine&#39;, &#39;author\_ave\_category&#39;]. To avoid cheating, the author-related features are calculated only for authors in training dataset. For those authors appear in validation or testing dataset but not in training dataset, author-related features are set to be zero.
 
