@@ -70,4 +70,8 @@ Classification model predicting category.
 
 Please refer to &#39;LSTM\_GloVe\_feature\_regression&#39; and &#39;LSTM\_GloVe\_feature\_classification&#39;.
 
-Those two model files should have explained themselves well.
+I trained each model for only 5 epochs, because each epoch took about 2 hours on my laptop.
+
+There is a weird problem with predicting test samples. I used model.predict, model.predict_generator and model.evaluate_generator, but they gave me different thing than each other. I'm trying to figure out what is happening, but haven't yet. Please refer to the model files for more details.
+
+Anyway, it seems the classification prediction is pretty poor while the regression prediction is Okay. One reason is probably that the threshold I chose for classification problem -- &#39;up\_votes&#39; = 5, is not really a good one. There's no apparent difference between &#39;up\_votes&#39; = 5 and &#39;up\_votes&#39; = 6, but the model has to predict them as category 0 and category 1, which is hard.
