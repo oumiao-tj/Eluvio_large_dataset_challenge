@@ -46,7 +46,7 @@ Instead of saving each row of the original &#39;.csv&#39; as a single file, only
 
 a) &#39;EDA\_data\_processing.ipynb&#39;
 
-It does EDA, generates and saves the following files to &quot;D:\eluvio\data\_\&quot; for training use:
+It does EDA, generates and saves the following files to &quot;D:\eluvio\data\_\ &quot; for training use:
 
 _&quot;modified\_embedding\_matrix.npy&quot;_ : word embedding matrix mapping word token to word embedding vector. I loaded pretrained &#39;glove.6B.50d&#39; for word embedding. There are 13741 missing words in &#39;title&#39; text. I tried SpellChecker but it works awful. Then I manually corrected the 40 most frequent words and set word embedding of the rest missing words be zero vectors.
 
