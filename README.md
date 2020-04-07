@@ -75,3 +75,17 @@ I trained each model for only 5 epochs, because each epoch took about 2 hours on
 There is a weird problem with predicting test samples. I used model.predict, model.predict_generator and model.evaluate_generator, but they gave me different thing than each other. I'm trying to figure out what is happening, but haven't yet. Please refer to the model files for more details.
 
 Anyway, it seems the classification prediction is pretty poor while the regression prediction is Okay. One reason is probably that the threshold I chose for classification problem -- &#39;up\_votes&#39; = 5, is not really a good one. There's no apparent difference between &#39;up\_votes&#39; = 5 and &#39;up\_votes&#39; = 6, but the model has to predict them as category 0 and category 1, which is hard.
+
+------------------------------------------------------------------------------------------------------------
+
+**Some further improvement to do**
+
+One can try the following things to improve the model behavior:
+
+a) Change model structure.
+
+b) Load a latest pretrained word embedding instead of GloVe to cover more missing words.
+
+c) Instead of mapping missing words to zero vectors, one can fine tune word embedding by training on &#39;title&#39; texts, or simply enable trainable = True in the embedding layer in model.
+
+d) Create more features using columns -- time, date, author, over_18.
