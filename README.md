@@ -10,7 +10,7 @@ One difficulty was, &#39;up\_votes&#39; ranges from 0 to 21253 and the distribut
 
 a) The binary classification problem
 
-Define a binary class &#39;category&#39; based on: &#39;category&#39; 0 if &#39;up\_votes&#39; $\geq$ 5 else &#39;category&#39; 1. There is no specific reason of choosing threshold &#39;up\_votes&#39; = 5, but naively because in this way &#39;category&#39; 0  and &#39;category&#39; 1 have about equal data amounts. This makes it a balanced binary classification problem.
+Define a binary class &#39;category&#39; based on: &#39;category&#39; 0 if &#39;up\_votes&#39;  &ge; 5 else &#39;category&#39; 1. There is no specific reason of choosing threshold &#39;up\_votes&#39; = 5, but naively because in this way &#39;category&#39; 0  and &#39;category&#39; 1 have about equal data amounts. This makes it a balanced binary classification problem.
 
 b) The regression problem
 
