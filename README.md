@@ -88,4 +88,4 @@ b) Load a latest pretrained word embedding instead of GloVe to cover more missin
 
 c) Instead of mapping missing words to zero vectors, one can fine tune word embedding by training on &#39;title&#39; texts, or simply enable trainable = True in the embedding layer in model.
 
-d) Create more features using columns -- time, date, author, over_18.
+d) Create more features using columns -- time, date, author, over_18, especially try a better way to encode authors, perhaps one-hot.
