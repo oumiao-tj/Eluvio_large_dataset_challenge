@@ -80,7 +80,7 @@ It seems the classification prediction is pretty poor while the regression predi
 
 One can try the following things to improve the model behavior:
 
-a) Change model structure. Build deeper neural network, add batchnormalization and regularizers layers, try different optimizers with different learning rates.
+a) Change model structure. Build deeper neural network, add batchnormalization and regularizers layers, use cross validation, try different optimizers with different learning rates.
 
 b) Load a latest pretrained word embedding instead of GloVe to cover more missing words.
 
